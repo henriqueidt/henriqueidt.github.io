@@ -1,0 +1,43 @@
+html, body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-app {
+    padding: 1em;
+}
+
+.app-title {
+    text-align: center;
+}
+
+.todo-list {
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blanchedalmond;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.task-adder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.add-button {
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #c4c4c4;
+    border-radius: 100%;
+}
