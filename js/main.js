@@ -89,6 +89,7 @@ function createHtmlTask(text, id, isMarket = false) {
 function addTask(taskInputEl) {
   const inputText = taskInputEl.value
   addTaskToDatabase(inputText);
+  taskInputEl.value = ''
 }
 
 function deleteNode(node) {
