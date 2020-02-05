@@ -1,5 +1,6 @@
 let db = null;
 let todoListEl;
+let checkBoxEl;
 
 function startServiceWorkers() {
   if ('serviceWorker' in navigator) {
@@ -74,7 +75,7 @@ function removeTaskFromDatabase(id) {
 
 function createHtmlTask(text, id) {
   const html = `
-    <li data-id=${id}>
+    <li data-id=${id} data-market=${checkBoxEl.checked}>
       <span>${text}</span>
       <button class="delete-button js-delete-button">
         <img class="delete" src="./trash-can.svg" alt="">
@@ -115,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const taskInputEl = document.querySelector('.js-task-input');
   const addButtonEl = document.querySelector('.js-add-button');
   todoListEl = document.querySelector('.js-todo-list');
+  checkBoxEl = document.querySelector('#market');
 
   addButtonEl.addEventListener('click', event => addTask(taskInputEl));
   todoListEl.addEventListener('click', handleListClick);

@@ -25,11 +25,20 @@ li {
     margin-bottom: .5em;
 }
 
+[data-market="true"] {
+    background-color: green;
+}
+
 .task-adder {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+}
+
+.market-option-container {
+    display: flex;
+    align-items: center;
 }
 
 .add-button {
