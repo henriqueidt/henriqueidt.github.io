@@ -40,7 +40,7 @@ function readTasksFromDatabase() {
     const cursor = e.target.result;
 
     if(cursor) {
-      createHtmlTask(cursor.value.name, cursor.value.id)
+      createHtmlTask(cursor.value.name, cursor.value.id, cursor.value.market)
       cursor.continue();
     }
   }
@@ -54,7 +54,8 @@ function addTaskToDatabase(task) {
 
   const todoList = transaction.objectStore('todo');
   const request = todoList.add({
-    name: task
+    name: task,
+    market: checkBoxEl.checked
   })
 
   request.onsuccess = e => {
@@ -73,9 +74,9 @@ function removeTaskFromDatabase(id) {
   todoList.delete(parseInt(id))
 }
 
-function createHtmlTask(text, id) {
+function createHtmlTask(text, id, isMarket = false) {
   const html = `
-    <li data-id=${id} data-market=${checkBoxEl.checked}>
+    <li data-id=${id} data-market=${isMarket || checkBoxEl.checked}>
       <span>${text}</span>
       <button class="delete-button js-delete-button">
         <img class="delete" src="./trash-can.svg" alt="">

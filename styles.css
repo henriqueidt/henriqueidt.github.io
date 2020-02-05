@@ -26,7 +26,7 @@ li {
 }
 
 [data-market="true"] {
-    background-color: green;
+    background-color: orange;
 }
 
 .task-adder {
