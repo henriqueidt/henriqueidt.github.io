@@ -79,7 +79,7 @@ function createHtmlTask(text, id, isMarket = false) {
     <li data-id=${id} data-market=${isMarket || checkBoxEl.checked}>
       <span>${text}</span>
       <button class="delete-button js-delete-button">
-        <img class="delete" src="./trash-can.svg" alt="">
+        <img class="delete-image" src="./trash-can.svg" alt="">
       </button>
     </li>
   `
@@ -99,7 +99,10 @@ function deleteNode(node) {
 
 function handleListClick(event) {
   if(event.target.className.indexOf('delete') >= 0) {
-    deleteNode(event.target.closest('li'));
+    const response = confirm("Deseja mesmo deletar a task?")
+    if(response) {
+      deleteNode(event.target.closest('li'));
+    }
   }
 }
 
