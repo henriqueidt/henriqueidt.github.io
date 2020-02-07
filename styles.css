@@ -2,6 +2,7 @@ html, body {
     height: 100vh;
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .todo-app {
@@ -23,10 +24,19 @@ li {
     background-color: blanchedalmond;
     padding: .5em;
     margin-bottom: .5em;
+    border-radius: 30px;
+    color: darkred;
+    font-weight: bold;
+    text-align: center;
 }
 
 [data-market="true"] {
     background-color: orange;
+}
+
+.delete-button {
+    background: none;
+    border: none;
 }
 
 .task-adder {
@@ -34,6 +44,10 @@ li {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+}
+
+.task-input {
+    border: none;
 }
 
 .market-option-container {
