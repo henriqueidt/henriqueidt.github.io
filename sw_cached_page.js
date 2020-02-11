@@ -1,4 +1,4 @@
-const cacheName = 'v2'
+const cacheName = '1.0.2'
 
 const cacheAssets = [
   '/',
