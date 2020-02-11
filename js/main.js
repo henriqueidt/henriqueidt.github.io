@@ -15,7 +15,6 @@ function startServiceWorkers() {
 
 function requstNotificationsPermission() {
   Notification.requestPermission(function(status) {
-    alert(status)
     console.log('Notification permission status:', status);
 });
 
@@ -92,7 +91,7 @@ function createHtmlTask(text, id, isMarket = false) {
     <li data-id=${id} data-market=${isMarket || checkBoxEl.checked}>
       <span>${text}</span>
       <button class="delete-button js-delete-button">
-        <img class="delete-image" src="./trash-can.svg" alt="">
+        <img class="delete-image" src="./assets/trash-can.svg" alt="">
       </button>
     </li>
   `
