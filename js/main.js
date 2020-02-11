@@ -108,15 +108,13 @@ function addTask(taskInputEl) {
 
 function deleteNode(node) {
   removeTaskFromDatabase(node.dataset.id)
-  node.parentNode.removeChild(node);
+  node.classList.add('removed-item')
+  setTimeout(() => node.parentNode.removeChild(node), 900);
 }
 
 function handleListClick(event) {
   if(event.target.className.indexOf('delete') >= 0) {
-    const response = confirm("Deseja mesmo deletar a task?")
-    if(response) {
-      deleteNode(event.target.closest('li'));
-    }
+    deleteNode(event.target.closest('li'));
   }
 }
 
