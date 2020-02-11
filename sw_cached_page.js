@@ -1,9 +1,14 @@
-const cacheName = 'v1'
+const cacheName = 'v2'
 
 const cacheAssets = [
+  '/',
   'index.html',
-  '/js/main.js'
-]
+  '/js/main.js',
+  'styles.css',
+  'assets/icons8-edit-192.png',
+  'assets/icons8-edit-512.png',
+  'assets/trash-can.svg'
+];
 
 self.addEventListener('install', event => {
   console.log('serice worker installed')
