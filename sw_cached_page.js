@@ -5,8 +5,7 @@ const cacheAssets = [
   'index.html',
   '/js/main.js',
   'styles.css',
-  'assets/icons8-edit-192.png',
-  'assets/icons8-edit-512.png',
+  'assets/todo-logo-01.png',
   'assets/trash-can.svg'
 ];
 
