@@ -5,12 +5,18 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: #769599;
+}
+
 .todo-app {
     padding: 1em;
 }
 
 .app-title {
     text-align: center;
+    color: #33343D;
+    font-size: 2em;
 }
 
 .todo-list {
@@ -21,17 +27,18 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: #697B78;
     padding: .5em;
     margin-bottom: .5em;
     border-radius: 30px;
-    color: darkred;
+    color: rgb(221, 212, 150);
+    text-transform: uppercase;
     font-weight: bold;
     text-align: center;
 }
 
 [data-market="true"] {
-    background-color: orange;
+    background-color: #33343D;
 }
 
 .delete-button {
@@ -43,11 +50,19 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #33343D;
+    padding-bottom: .4em;
 }
 
 .task-input {
     border: none;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+}
+
+.task-input::placeholder {
+    color: rgb(63, 107, 100);
 }
 
 .market-option-container {
@@ -63,4 +78,5 @@ li {
     font-size: 15px;
     background-color: #c4c4c4;
     border-radius: 100%;
+    border: none;
 }
