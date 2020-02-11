@@ -36,6 +36,14 @@ li {
     font-weight: bold;
     text-align: center;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+    transition: 2ms;
+    opacity: 0;
+    animation: new-item-animation .3s linear forwards;
+}
+
+li.removed-item {
+    animation: removed-item-animation 1s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+    transform-origin: 0% 100%;
 }
 
 [data-market="true"] {
@@ -87,4 +95,28 @@ li {
     border-radius: 100%;
     border: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes new-item-animation {
+    from {
+        opacity: 0;
+        transform: translateY(-400px);
+}
+ 
+    to {
+        opacity: 1;
+        transform : translateY(0);
+    }
+}
+
+@keyframes removed-item-animation {
+    0% {
+        opacity: 1;
+        transform: rotateZ(0);
+}
+ 
+    100% {
+        opacity: 0;
+        transform: translateY(600px) rotateZ(90deg);
+    }
 }
