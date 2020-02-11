@@ -70,6 +70,11 @@ li {
     align-items: center;
 }
 
+.checkbox-label {
+    color: #33343D;
+    font-weight: bold;
+}
+
 .add-button {
     padding: 0;
     width: 2em;
