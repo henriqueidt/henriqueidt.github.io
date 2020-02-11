@@ -13,17 +13,17 @@ function startServiceWorkers() {
   }
 }
 
-// function requstNotificationsPermission() {
-//   Notification.requestPermission(function(status) {
-//     console.log('Notification permission status:', status);
-// });
+function requstNotificationsPermission() {
+  Notification.requestPermission(function(status) {
+    console.log('Notification permission status:', status);
+});
 
-//   if (Notification.permission == 'granted') {
-//     navigator.serviceWorker.getRegistration().then(function(reg) {
-//       reg.showNotification('Hello world!');
-//     });
-//   }
-// }
+  if (Notification.permission == 'granted') {
+    navigator.serviceWorker.getRegistration().then(function(reg) {
+      reg.showNotification('Hello world!');
+    });
+  }
+}
 
 function openIndexedDB() {
   let openRequest = indexedDB.open('store');
@@ -129,7 +129,7 @@ function handleInputKey(event) {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   startServiceWorkers();
-  requstNotificationsPermission()
+  // requstNotificationsPermission()
 
   openIndexedDB();
 
