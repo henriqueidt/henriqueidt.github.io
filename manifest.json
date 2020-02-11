@@ -3,18 +3,14 @@
     "name": "TODO App",
     "icons": [
       {
-        "src": "/assets/icons8-edit-192.png",
+        "src": "/assets/todo-logo-01.png",
         "type": "image/png",
-        "sizes": "192x192"
-      },
-      {
-        "src": "/assets/icons8-edit-512.png",
-        "type": "image/png",
-        "sizes": "512x512"
+        "sizes": "1200x1200",
+        "purpose": "maskable any"
       }
     ],
     "start_url": "/",
-    "background_color": "#3367D6",
+    "background_color": "#769599",
     "display": "standalone",
-    "theme_color": "#3367D6"
+    "theme_color": "#33343D"
   }
