@@ -1,3 +1,7 @@
+:root {
+    --color-primary: #33343D;
+}
+
 html, body {
     height: 100vh;
     padding: 0;
@@ -15,7 +19,7 @@ body {
 
 .app-title {
     text-align: center;
-    color: #33343D;
+    color: var(--color-primary);
     font-size: 2em;
 }
 
@@ -47,7 +51,7 @@ li.removed-item {
 }
 
 [data-market="true"] {
-    background-color: #33343D;
+    background-color: ;
 }
 
 .delete-button {
@@ -60,7 +64,7 @@ li.removed-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #33343D;
+    border-bottom: 1px solid var(--color-primary);
     padding-bottom: .4em;
 }
 
@@ -81,7 +85,7 @@ li.removed-item {
 }
 
 .checkbox-label {
-    color: #33343D;
+    color: var(--color-primary);
     font-weight: bold;
 }
 
