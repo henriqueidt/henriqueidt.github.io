@@ -21,14 +21,38 @@
       <input
         type="text"
         class="task-input js-task-input"
-        placeholder="Insira o nome da task..."  
+        placeholder="Insira o nome da task..."
       >
-      <div class="market-option-container">
-        <input type="checkbox" name="market" id="market">
-        <label for="market" class="checkbox-label">Mercado</label>
+      <div class="category-select-container">
+		  <select class="js-category-select category-select" name="" id="">
+			  <option value="">Selecione</option>
+			  <option value="new">Nova categoria...</option>
+		  </select>
       </div>
       <button class="add-button js-add-button">&#43;</button>
     </div>
+  </section>
+  <section class="js-modal modal" style="display: block;">
+	  <div class="modal-backdrop js-modal-backdrop"></div>
+	  <div class="modal-content">
+		  <header class="modal-header">
+			  <h4 class="modal-title">Nova categoria</h2>
+				<button class="close-btn">&times;</button>
+		  </header>
+		  <div class="modal-body">
+			  <div>
+				  <label for="category-name-input">Nome:</label>
+				  <input type="text" name="name" id="category-name-input">
+			  </div>
+			  <div>
+				  <label for="category-color-input">Cor:</label>
+				  <input type="color" name="color" id="category-color-input">
+			  </div>
+		  </div>
+		  <footer class="modal-footer">
+			  <button class="js-create-category-btn">Criar</button>
+		  </footer>
+	  </div>
   </section>
 </body>
 </html>
