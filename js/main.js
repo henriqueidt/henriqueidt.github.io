@@ -30,7 +30,7 @@ function requstNotificationsPermission() {
 }
 
 function openIndexedDB() {
-  let openRequest = indexedDB.open('store', 7);
+  let openRequest = indexedDB.open('store', 11);
 
   openRequest.onupgradeneeded = () => {
 	db = openRequest.result;
@@ -79,7 +79,7 @@ function readCategoriesFromDatabase() {
     const cursor = e.target.result;
 
     if(cursor) {
-		createHtmlOption(cursor.value)
+		  createHtmlOption(cursor.value)
       cursor.continue();
     }
   }
